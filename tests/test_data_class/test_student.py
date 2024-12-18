@@ -3,4 +3,4 @@ from data_class.helper import StudentHelper
 
 def test_get_full_name():
     student = Student("John", "Doe")
-    assert StudentHelper.get_full_name(student) == "John Doe"
+    assert student.get_full_name() == "John Doe"
