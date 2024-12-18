@@ -6,7 +6,9 @@ class Customer:
         self.order = Order(order_amount)
     
     def calculate_discount(self) -> float:
-        # Feature envy: Customer class is accessing too much of Order's details
+        return self._get_discount_amount()
+    
+    def _get_discount_amount(self) -> float:
         if self.order.amount > 500:
             return self.order.amount * 0.1
         else:
